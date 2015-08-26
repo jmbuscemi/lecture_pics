@@ -1,0 +1,14 @@
+<%= form_tag sessions_login_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div style="text-align:center">
+    <%= submit_tag "Login" %>
+    <%= link_to "Sign up", new_user_path %>
+  </div>
+<% end %>
