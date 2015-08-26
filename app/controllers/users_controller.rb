@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
+  before_action :logged_in?, except: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in?
 
   # GET /users
   def index
@@ -25,7 +25,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      session[:user_id] = @user.id
+      redirect_to root_path, notice: 'User was successfully created.'
     else
       render :new
     end
@@ -54,15 +55,13 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 
     def logged_in?
-      if User.find(session[:user_id])
-        return true
-      else
-        redirect_to sessions_login_path, notice: "User not logged in!"
+      @user = User.find_by_id(session[:user_id])
+      unless @user
+        redirect_to login_path, notice: "Please login"
       end
     end
-
 end

@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
@@ -21,9 +25,14 @@
   </div>
   <div class="field">
     <%= f.label :password %><br>
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </div>
+  <div class="field">
+    <%= f.label "Confirm Password" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create TA Account' %>
   </div>
 <% end %>
