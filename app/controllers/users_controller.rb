@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    @picture = Picture.new
   end
 
   # GET /users/new
@@ -55,8 +56,8 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password,
-          :password_confirmation, :uploaded_file)
+      params.require(:user).permit(:id, :first_name, :last_name, :email, :password,
+          :password_confirmation)
     end
 
     def logged_in?

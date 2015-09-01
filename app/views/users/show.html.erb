@@ -5,7 +5,7 @@
 <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
 
 
-<%= form_for @user, html: { multipart: true } do |f| %>
+<%= form_for @picture, html: { multipart: true } do |f| %>
   <%= f.file_field :uploaded_file %>
 
   <%= f.submit 'Upload' %>
@@ -15,16 +15,19 @@
 <table>
   <thead>
     <th> File Name |</th>
-    <th> Extension |</th>
     <th> Upload Date </th>
   </thead>
-
-  <tbody>
-    <tr> <%= @user.uploaded_file_file_name %> </tr>
-    <tr> <%= @user.uploaded_file_content_type %> </tr>
-    <tr> <%= @user.uploaded_file_updated_at %> </tr>
-  </tbody>
 </table>
+<% @user.pictures.each do |picture| %>
+  <table>
+    <tbody>
+      <tr> <%= picture.uploaded_file_file_name %>  | </tr>
+      <tr> <%= picture.uploaded_file_updated_at %> </tr>
+    </tbody>
+  </table>
+<% end %>
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
