@@ -1,17 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= @user.name %>'s Uploads</h1>
+<%= link_to 'Edit User Info', edit_user_path(@user) %> |
 
 <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
 
-
+</br>
 <%= form_for @picture, html: { multipart: true } do |f| %>
   <%= f.file_field :uploaded_file %>
-
   <%= f.submit 'Upload' %>
-
 <% end %>
-
+</br>
 <table>
   <thead>
     <th> File Name |</th>
@@ -28,8 +27,3 @@
     </tbody>
   </table>
 <% end %>
-
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

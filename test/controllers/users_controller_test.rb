@@ -6,12 +6,6 @@ class UsersControllerTest < ActionController::TestCase
     session[:user_id] = @user.id
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:users)
-  end
-
   test "should get new" do
     get :new
     assert_response :success
@@ -19,7 +13,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, user: { email: "new_user.email", first_name: @user.first_name, 
+      post :create, user: { email: "new_user.email", first_name: @user.first_name,
           last_name: @user.last_name, password: "password" }
     end
 

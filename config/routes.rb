@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :pictures
+  resources :users
   get 'sessions/login'
   get 'login' => 'sessions#login'
 
@@ -8,8 +9,6 @@ Rails.application.routes.draw do
 
   get 'sessions/logout'
   get 'logout' => 'sessions#logout'
-
-  resources :users
 
   root 'users#show'
 
