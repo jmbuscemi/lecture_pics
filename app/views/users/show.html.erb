@@ -15,7 +15,8 @@
 <table>
   <thead>
     <th> File Name |</th>
-    <th> Upload Date </th>
+    <th> Upload Date | </th>
+    <th> URL </th>
   </thead>
 </table>
 <% @user.pictures.each do |picture| %>
@@ -23,6 +24,7 @@
     <tbody>
       <tr> <%= picture.uploaded_file_file_name %>  | </tr>
       <tr> <%= picture.uploaded_file_updated_at %> </tr>
+      <tr> <%= picture.uploaded_file.url %> </tr>
     </tbody>
   </table>
 <% end %>
