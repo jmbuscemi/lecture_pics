@@ -24,7 +24,7 @@
     <tbody>
       <tr> <%= picture.uploaded_file_file_name %>  | </tr>
       <tr> <%= picture.uploaded_file_updated_at %> </tr>
-      <tr> <%= picture.uploaded_file.url %> </tr>
+      <tr> <%= link_to "View Picture", picture.uploaded_file.url, target: "_blank" %> </tr>
     </tbody>
   </table>
 <% end %>
