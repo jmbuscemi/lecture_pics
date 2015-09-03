@@ -23,7 +23,7 @@
     <tbody>
       <tr> <%= picture.uploaded_file_file_name %>  | </tr>
       <tr> <%= picture.uploaded_file_updated_at.strftime "%Y-%m-%d" %> | </tr>
-      <tr> <%= link_to "View Picture", picture.uploaded_file.url, target: "_blank" %> </tr>
+      <tr> <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}" %> | <%= link_to "View Picture", picture.uploaded_file.url, target: "_blank" %> </tr>
     </tbody>
   </table>
 <% end %>
