@@ -36,6 +36,8 @@ gem 'puma'
 gem 'devise'
 gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
+gem 'foundation-rails'
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
