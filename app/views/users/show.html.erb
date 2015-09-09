@@ -29,10 +29,16 @@
 <div class="row">
   <div class="large-9 columns">
     <h4>Upload Today's Lecture Pictures</h4>
-    <%= form_for @picture, html: { multipart: true } do |f| %>
-      <%= f.file_field :uploaded_file %>
-      <%= f.submit 'Upload', class: "radius button" %>
-    <% end %>
+    <div class="row">
+      <%= form_for @picture, html: { multipart: true } do |f| %>
+        <div class="small-8 columns">
+          <%= f.file_field :uploaded_file %>
+        </div>
+        <div class="small-4 columns">
+          <%= f.submit 'Upload', class: "radius button tiny" %>
+        </div>
+      <% end %>
+    </div>
 
     <div class="section-container tabs" data-section>
       <section class="section">
@@ -44,13 +50,20 @@
             <% @user.pictures.each do |picture| %>
               <li>
                 <%= picture.uploaded_file_file_name %>
+                  <span class="right">
+                    <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
+                        picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </span>
                 <%= image_tag picture.uploaded_file.url %>
-                <div class="row">
+                <div class="row ">
                   <div class="small-10 columns">
-                    <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}" %>
+                    <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
+                        name: "box-content", id: "box-content"%>
                   </div>
-                  <div class="small-2 columns">
-                    <i class="fa fa-clipboard"></i>
+                  <div class="small-2 columns right">
+                    <button type="submit" class="radius button tiny" id="copy" name="copy">
+                      <i class="fa fa-clipboard"></i>
+                    </button>
                   </div>
                 </div>
               </li>
