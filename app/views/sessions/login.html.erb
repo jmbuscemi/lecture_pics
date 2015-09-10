@@ -1,16 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_tag sessions_login_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+<div class="large-3 large-centered columns">
+  <div class="login-box">
+    <div class="row">
+      <div class="large-12 columns">
+        <%= form_tag sessions_login_path do %>
+          <div class="row">
+             <div class="large-12 columns">
+               <%= text_field_tag :email, nil, placeholder: "Email" %>
+             </div>
+           </div>
+          <div class="row">
+             <div class="large-12 columns">
+               <%= password_field_tag :password, nil, placeholder: "Password" %>
+             </div>
+          </div>
+          <div class="row">
+            <div class="large-12 large-centered columns">
+              <%= submit_tag "Login", class: "button expand"%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 large-centered columns" id="sign-up-link" >
+              <%= link_to "Sign up", new_user_path %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div style="text-align:center">
-    <%= submit_tag "Login" %>
-    <%= link_to "Sign up", new_user_path %>
-  </div>
-<% end %>
+</div>
