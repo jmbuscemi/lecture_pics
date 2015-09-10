@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to root_path, notice: "Login successful."
       else
-        flash.now[:notice] = "Invalid username and password."
+        flash.now[:notice] = "Invalid username or password."
       end
     end
   end

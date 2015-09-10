@@ -10,6 +10,28 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
+ *= require foundation
+ *= require font-awesome
  */
+
+body {
+background: #EFEFEF;
+}
+
+#copy {
+  padding: 10px;
+}
+
+.login-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 100px 0;
+  padding: 40px 20px 0 20px;
+}
+
+#sign-up-link {
+  text-align: center;
+  padding-bottom: 20px;
+}

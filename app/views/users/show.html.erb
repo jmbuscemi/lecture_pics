@@ -1,29 +1,89 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="#">
+          TIYD-Rails TA Page
+        </a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a href="#"><%= @user.name %></a>
+        <ul class="dropdown">
+          <li><%= link_to 'Edit Profile', edit_user_path(@user) %></li>
+          <li><%= link_to 'Log Out', logout_path %></li>
+          <li class="divider"></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+
 <p id="notice"><%= notice %></p>
 
-<h1><%= @user.name %>'s Uploads</h1>
-<%= link_to 'Edit User Info', edit_user_path(@user) %> |
+<div class="row">
+  <div class="large-9 columns">
+    <h4>Upload Today's Lecture Pictures</h4>
+    <div class="row">
+      <%= form_for @picture, html: { multipart: true } do |f| %>
+        <div class="small-8 columns">
+          <%= f.file_field :uploaded_file %>
+        </div>
+        <div class="small-4 columns">
+          <%= f.submit 'Upload', class: "radius button tiny" %>
+        </div>
+      <% end %>
+    </div>
 
-<%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
+    <div class="section-container tabs" data-section>
+      <section class="section">
+        <h5 class="title">Uploaded Pictures</h5>
+      </section>
+      <section class="section">
+        <div class="content" data-slug="panel2">
+          <ul class="large-block-grid-3">
+            <% @user.pictures.each do |picture| %>
+              <li>
+                <%= picture.uploaded_file_file_name %>
+                  <span class="right">
+                    <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
+                        picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </span>
+                <%= image_tag picture.uploaded_file.url %>
+                <div class="row ">
+                  <div class="small-10 columns">
+                    <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
+                        name: "box-content", id: "box-content"%>
+                  </div>
+                  <div class="small-2 columns">
+                    <button type="submit" class="radius button tiny" id="copy" name="copy">
+                      <i class="fa fa-clipboard"></i>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
 
-</br>
-<%= form_for @picture, html: { multipart: true } do |f| %>
-  <%= f.file_field :uploaded_file %>
-  <%= f.submit 'Upload' %>
-<% end %>
-</br>
-<table>
-  <thead>
-    <th> File Name |</th>
-    <th> Upload Date | </th>
-    <th> URL </th>
-  </thead>
-</table>
-<% @user.pictures.each do |picture| %>
-  <table>
-    <tbody>
-      <tr> <%= picture.uploaded_file_file_name %>  | </tr>
-      <tr> <%= picture.uploaded_file_updated_at.strftime "%Y-%m-%d" %> | </tr>
-      <tr> <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}" %> | <%= link_to "View Picture", picture.uploaded_file.url, target: "_blank" %> </tr>
-    </tbody>
-  </table>
-<% end %>
+<footer class="row">
+  <div class="large-12 columns">
+    <hr/>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>© Copyright no one at all. Go to town.</p>
+      </div>
+      <div class="large-6 columns">
+      </div>
+    </div>
+  </div>
+</footer>
