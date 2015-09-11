@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+# environment_seed_file = File.join(Rails.root, 'db', 'seeds', "#{Rails.env}.rb")
+
+@post = Picture.new
+@post.uploaded_file = File.new("app/assets/images/seed/maple.jpg")
