@@ -7,7 +7,6 @@
         </a>
       </h1>
     </li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
   </ul>
   <section class="top-bar-section">
     <ul class="right">
@@ -54,7 +53,8 @@
                     <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
                         picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
                   </span>
-                <%= image_tag picture.uploaded_file.url %>
+                </br>
+                <%= image_tag picture.uploaded_file.url, class:"image" %>
                 <div class="row ">
                   <div class="small-10 columns">
                     <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
