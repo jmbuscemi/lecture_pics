@@ -51,3 +51,30 @@ background: #EFEFEF;
 .edit-header {
   text-align: center;
 }
+
+
+
+// get icon and text box to alight
+// .small-9.columns{
+//   padding-right: 0
+// }
+// .small-2.columns{
+//   padding-top:2.5px;
+//   padding-left: 0;
+//   left:-20px;
+//
+// }
+.radius.button.tiny.copybutton{
+
+  background-color: red;
+  float:left;
+  height: 100%
+}
+#box-content{
+  float:left;
+  box-sizing: none;
+  width: 76%
+}
+.fa.fa-clipboard{
+  font-size: 1.5em
+}
