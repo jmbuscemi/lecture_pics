@@ -66,7 +66,7 @@ background: #EFEFEF;
 // }
 .radius.button.tiny.copybutton{
 
-  background-color: red;
+  // background-color: red;
   float:left;
   height: 100%
 }
@@ -81,6 +81,9 @@ background: #EFEFEF;
 
 .large-block-grid-3{
   li{
-    
+    img{
+      margin: auto;
+      text-align: center;
+    }
   }
 }
