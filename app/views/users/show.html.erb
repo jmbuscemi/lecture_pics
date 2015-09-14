@@ -58,11 +58,13 @@
                 <%= image_tag picture.uploaded_file.url(:medium) %>
                 <div class="row ">
                   <div class="small-12 columns">
-                    <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
-                        name: "box-content", id: "box-content"%>
-                    <button type="submit" class="radius button tiny copybutton" id="copy" name="copy">
-                      <i class="fa fa-clipboard"></i>
-                    </button>
+                    <!-- <div class="medium-offset-1"> -->
+                      <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
+                          name: "box-content", id: "box-content"%>
+                      <button type="submit" class="button tiny copybutton" id="copy" name="copy">
+                        <i class="fa fa-clipboard"></i>
+                      </button>
+                    <!-- </div> -->
                   </div>
                 </div>
               </li>

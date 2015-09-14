@@ -67,7 +67,8 @@ background: #EFEFEF;
 #box-content{
   float:left;
   box-sizing: none;
-  width: 76%
+  width: 86%;
+  padding: 0;
 }
 .fa.fa-clipboard{
   font-size: 1.5em
@@ -75,9 +76,17 @@ background: #EFEFEF;
 
 .large-block-grid-3{
   li{
-    img{
-      margin: auto;
-      text-align: center;
-    }
+    // text-align: center;
   }
+}
+.small-12.columns{
+  width:270px;
+  padding: 0;
+  // display: inline-block;
+  text-align: center;
+  left: 15px;
+}
+#copy{
+  // padding-top:0;
+  // padding-right: 0;
 }
