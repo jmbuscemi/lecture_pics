@@ -1,4 +1,4 @@
-<nav class="top-bar" data-topbar>
+<nav class="top-bar" role="navigation" aria-hidden="true" data-options="mobile_show_parent_link: false" data-topbar>
   <ul class="title-area">
     <li class="name">
       <h1>
@@ -7,6 +7,7 @@
         </a>
       </h1>
     </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
   </ul>
   <section class="top-bar-section">
     <ul class="right">
@@ -54,7 +55,7 @@
                         picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
                   </span>
                 </br>
-                <%= image_tag picture.uploaded_file.url, class:"image" %>
+                <%= image_tag picture.uploaded_file.url(:medium) %>
                 <div class="row ">
                   <div class="small-10 columns">
                     <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
