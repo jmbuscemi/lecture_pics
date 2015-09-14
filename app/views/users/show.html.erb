@@ -47,7 +47,7 @@
         <div class="content" data-slug="panel2">
           <ul class="large-block-grid-3">
             <% @user.pictures.each do |picture| %>
-              <li>
+               <li>
                 <%= picture.uploaded_file_file_name %>
                   <span class="right">
                     <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
