@@ -55,12 +55,12 @@
                         picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
                   </span>
                 </br>
-                <%= image_tag picture.uploaded_file.url(:medium) %>
-                <div class="row ">
+                <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
+                <div class="row">
                   <div class="small-12 columns">
                     <!-- <div class="medium-offset-1"> -->
                       <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
-                          name: "box-content", id: "box-content"%>
+                          name: "box-content", id: "box-content" %>
                       <button type="submit" class="button tiny copybutton" id="copy" name="copy">
                         <i class="fa fa-clipboard"></i>
                       </button>

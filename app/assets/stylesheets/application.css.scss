@@ -69,9 +69,25 @@ background: #EFEFEF;
   box-sizing: none;
   width: 86%;
   padding: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-top-color: rgb(119, 119, 119);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-color: rgb(119, 119, 119);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(119, 119, 119);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(119, 119, 119);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 .fa.fa-clipboard{
-  font-size: 1.5em
+  font-size: 1.4em
 }
 
 .large-block-grid-3{
@@ -89,4 +105,13 @@ background: #EFEFEF;
 #copy{
   // padding-top:0;
   // padding-right: 0;
+  border: 1px solid rgb(119, 119, 119);
+  border-left-width: 0px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.image-box {
+    margin-bottom: 2px;
+    border-radius: 2px;
 }
