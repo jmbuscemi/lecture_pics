@@ -48,13 +48,16 @@
         <div class="content" data-slug="panel2">
           <ul class="large-block-grid-3">
             <% @user.pictures.each do |picture| %>
-               <li>
-                <%= picture.uploaded_file_file_name %>
-                  <span class="right">
-                    <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
-                        picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
-                  </span>
-                </br>
+              <li>
+                <div class="row">
+                  <div class="small-12 columns" id="image-title">
+                    <%= picture.uploaded_file_file_name %>
+                      <span class="right">
+                        <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
+                            picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </span>
+                  </div>
+                </div>
                 <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
                 <div class="row">
                   <div class="small-12 columns">
