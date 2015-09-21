@@ -25,6 +25,6 @@ class PicturesControllerTest < ActionController::TestCase
       delete :destroy, id: @picture
     end
 
-    assert_redirected_to pictures_path
+    assert_redirected_to root_path
   end
 end
