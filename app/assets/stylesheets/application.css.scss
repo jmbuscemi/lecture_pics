@@ -64,6 +64,7 @@ background: #EFEFEF;
   float:left;
   height: 100%
 }
+
 #box-content{
   float:left;
   box-sizing: none;
@@ -71,18 +72,7 @@ background: #EFEFEF;
   padding: 0;
   padding-left: 3px;
   padding-right: 3px;
-  border-top-color: rgb(119, 119, 119);
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-color: rgb(119, 119, 119);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-left-color: rgb(119, 119, 119);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: rgb(119, 119, 119);
-  border-right-style: solid;
-  border-right-width: 1px;
+  border: 1px solid rgb(119, 119, 119);
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
