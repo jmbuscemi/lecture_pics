@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @picture = Picture.new
+    @pictures = @user.pictures.all.order(created_at: :desc)
   end
 
   def new
