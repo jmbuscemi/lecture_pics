@@ -24,17 +24,17 @@
   </section>
 </nav>
 
-<p id="notice"><%= notice %></p>
+<%= render partial: 'layouts/alert' %>
 
 <div class="row">
-  <div class="large-9 columns">
+  <div class="large-12 columns">
     <h4>Upload Today's Lecture Pictures</h4>
     <div class="row">
       <%= form_for @picture, html: { multipart: true } do |f| %>
         <div class="small-8 columns">
           <%= f.file_field :uploaded_file %>
         </div>
-        <div class="small-4 columns">
+        <div class=" columns">
           <%= f.submit 'Upload', class: "radius button tiny" %>
         </div>
       <% end %>
@@ -49,22 +49,25 @@
           <ul class="large-block-grid-3">
             <% @user.pictures.each do |picture| %>
               <li>
-                <%= picture.uploaded_file_file_name %>
-                  <span class="right">
-                    <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
-                        picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
-                  </span>
-                </br>
-                <%= image_tag picture.uploaded_file.url(:medium) %>
-                <div class="row ">
-                  <div class="small-10 columns">
-                    <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
-                        name: "box-content", id: "box-content"%>
+                <div class="row">
+                  <div class="small-12 columns" id="image-title">
+                    <%= picture.uploaded_file_file_name %>
+                      <span class="right">
+                        <%= link_to '<i class="fa fa-times" title="Delete"></i>'.html_safe,
+                            picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </span>
                   </div>
-                  <div class="small-2 columns">
-                    <button type="submit" class="radius button tiny" id="copy" name="copy">
-                      <i class="fa fa-clipboard"></i>
-                    </button>
+                </div>
+                <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
+                <div class="row">
+                  <div class="small-12 columns">
+                    <!-- <div class="medium-offset-1"> -->
+                      <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
+                          name: "box-content", id: "box-content" %>
+                      <button type="submit" class="button tiny copybutton" id="copy" name="copy">
+                        <i class="fa fa-clipboard"></i>
+                      </button>
+                    <!-- </div> -->
                   </div>
                 </div>
               </li>

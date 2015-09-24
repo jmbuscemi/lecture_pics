@@ -45,3 +45,79 @@ background: #EFEFEF;
 .edit-header {
   text-align: center;
 }
+
+
+
+// get icon and text box to alight
+// .small-9.columns{
+//   padding-right: 0
+// }
+// .small-2.columns{
+//   padding-top:2.5px;
+//   padding-left: 0;
+//   left:-20px;
+//
+// }
+.radius.button.tiny.copybutton {
+  // background-color: red;
+  float:left;
+  height: 100%
+}
+
+#box-content {
+  float:left;
+  box-sizing: none;
+  width: 86%;
+  padding: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 1px solid rgb(119, 119, 119);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.fa.fa-clipboard {
+  font-size: 1.4em
+}
+
+.large-block-grid-3 {
+  li{
+    // text-align: center;
+  }
+}
+
+.small-12.columns {
+  width:270px;
+  padding: 0;
+  // display: inline-block;
+  text-align: center;
+  left: 15px;
+}
+
+#copy {
+  // padding-top:0;
+  // padding-right: 0;
+  border: 1px solid rgb(119, 119, 119);
+  border-left-width: 0px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.image-box {
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+#image-title{
+  text-align: left;
+}
+
+.alert-box {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 17px !important;
+}
+
+.field_with_errors {
+  background-color: #f04124 !important;
+}

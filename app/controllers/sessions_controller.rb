@@ -4,15 +4,20 @@ class SessionsController < ApplicationController
       user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        redirect_to root_path, notice: "Login successful."
+        flash[:success] = "Welcome #{user.first_name}"
+        redirect_to root_path
+        # redirect_to root_path, notice: "Login successful."
       else
-        flash.now[:notice] = "Invalid username or password."
+        flash[:alert] = 'Invalid username or password.'
+        # flash.now[:notice] = "Invalid username or password."
       end
     end
   end
 
   def logout
     session[:user_id] = nil
-    redirect_to login_path, notice: "Logout successful."
+    flash[:success] = "Logout successful."
+    redirect_to login_path
+    # redirect_to login_path, notice: "Logout successful."
   end
 end

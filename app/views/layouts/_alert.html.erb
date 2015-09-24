@@ -1,0 +1,10 @@
+<div class="row">
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div data-alert class="alert-box <%= "#{name}" %> radius">
+        <%= msg %>
+        <%= link_to "&times;".html_safe, "#", :class => :close %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
