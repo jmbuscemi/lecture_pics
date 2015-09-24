@@ -15,6 +15,23 @@
 //= require foundation
 //= require_tree .
 
+$(function(){
+  var clearAlert = setTimeout(function(){
+    $(".alert-box").fadeOut('slow')
+  }, 3500);
+
+  $(document).on("click", ".alert-box a.close", function(event){
+    clearTimeout(clearAlert);
+  });
+
+  $(document).on("click", ".alert-box a.close", function(event) {
+    event.preventDefault();
+    $(this).closest(".alert-box").fadeOut(function(event){
+      $(this).remove();
+    });
+  });
+});
+
 $(function() {
   $(document).foundation();
 });
