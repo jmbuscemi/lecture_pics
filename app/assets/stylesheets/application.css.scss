@@ -124,7 +124,7 @@ background: #EFEFEF;
 }
 
 .field_with_errors {
-  background-color: #f04124 !important;
+  background-color: #F04124 !important;
 }
 
 div.show-image {
@@ -162,4 +162,12 @@ div.show-image input.picture-title {
 div.show-image a.delete {
     top: 0;
     left: 93%;
+}
+
+#delete-icon {
+  color: #333;
+}
+
+#delete-icon:hover {
+  color: rgba(240, 65, 36, 0.83);
 }
