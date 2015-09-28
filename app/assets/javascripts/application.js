@@ -39,7 +39,8 @@ $(document).ready(function() {
   var clip = new ZeroClipboard($("#copy"))
 });
 $("#clear-test").on("click", function(){
-  $("#copy-text").val("Copy me!");
+  var id = $(this).attr('data-id')
+  $("#copy-text"+id).val("Copy me!");
   $("#testarea").val("");
 });
 
