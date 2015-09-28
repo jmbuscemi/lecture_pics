@@ -22,6 +22,7 @@ background: #EFEFEF;
 
 #copy {
   padding: 10px;
+  margin-left: 1px;
 }
 
 .login-box {
@@ -81,7 +82,7 @@ background: #EFEFEF;
 }
 
 .fa.fa-trash {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .large-block-grid-3 {
@@ -124,4 +125,41 @@ background: #EFEFEF;
 
 .field_with_errors {
   background-color: #f04124 !important;
+}
+
+div.show-image {
+    position: relative;
+    float: left;
+}
+
+div.show-image:hover img {
+    opacity: 0.5;
+}
+
+div.show-image:hover input {
+    display: block;
+}
+
+div.show-image input {
+    position: absolute;
+    display: none;
+}
+
+div.show-image:hover a {
+    display: block;
+}
+
+div.show-image a {
+    position: absolute;
+    display: none;
+}
+
+div.show-image input.picture-title {
+    top: 0;
+    left: 0;
+}
+
+div.show-image a.delete {
+    top: 0;
+    left: 93%;
 }

@@ -49,16 +49,22 @@
           <ul class="large-block-grid-3">
             <% @pictures.each do |picture| %>
               <li>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="small-12 columns" id="image-title">
                     <%= picture.uploaded_file_file_name %>
-                      <span class="right">
-                        <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
-                            picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
-                      </span>
+                    <span class="right">
+                      <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
+                          picture ,method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </span>
                   </div>
+                </div> -->
+                <div class="show-image">
+                  <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
+                  <input class="picture-title" value= '<%= picture.uploaded_file_file_name %>' />
+                  <!-- <input class="delete" type="button" value="Delete" /> -->
+                  <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
+                      picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete" %>
                 </div>
-                <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
                 <div class="row">
                   <div class="small-12 columns">
                     <!-- <div class="medium-offset-1"> -->
