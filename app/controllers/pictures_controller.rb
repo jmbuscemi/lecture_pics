@@ -9,7 +9,7 @@ class PicturesController < ApplicationController
     @picture = Picture.new(picture_params)
     @picture.user_id = session[:user_id]
     if @picture.save
-      flash[:success] = "Picture was successfully created."
+      flash[:success] = "Picture successfully uploaded."
       redirect_to root_path
       # redirect_to root_path, notice: 'Picture was successfully created.'
     else
@@ -19,7 +19,7 @@ class PicturesController < ApplicationController
 
   def destroy
     @picture.destroy
-    flash[:warning] = "Picture was successfully destroyed."
+    flash[:warning] = "Picture successfully destroyed."
     redirect_to root_path
     # redirect_to root_path, notice: 'Picture was successfully destroyed.'
   end
