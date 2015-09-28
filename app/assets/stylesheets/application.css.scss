@@ -10,14 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require foundation
  *= require_self
  *= require_tree .
- *= require foundation
  *= require font-awesome
  */
 
 body {
-background: #EFEFEF;
+background: #FFF;
 }
 
 #copy {
@@ -48,33 +48,26 @@ background: #EFEFEF;
 }
 
 
-
-// get icon and text box to alight
-// .small-9.columns{
-//   padding-right: 0
-// }
-// .small-2.columns{
-//   padding-top:2.5px;
-//   padding-left: 0;
-//   left:-20px;
-//
-// }
-.radius.button.tiny.copybutton {
-  // background-color: red;
-  float:left;
-  height: 100%;
-}
-
-#box-content {
+input.image-title-box {
   float:left;
   box-sizing: none;
   width: 86%;
   padding: 0;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
   border: 1px solid rgb(119, 119, 119);
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.radius.button.tiny.copybutton {
+  // background-color: red;
+  float:left;
+  height: 100%;
 }
 
 .fa.fa-clipboard {
@@ -82,7 +75,7 @@ background: #EFEFEF;
 }
 
 .fa.fa-trash {
-  font-size: 1.3em;
+  font-size: 1.2rem;
 }
 
 .large-block-grid-3 {
@@ -169,5 +162,5 @@ div.show-image a.delete {
 }
 
 #delete-icon:hover {
-  color: rgba(240, 65, 36, 0.83);
+  color: rgba(255, 15, 15, 0.83);
 }
