@@ -33,6 +33,13 @@ $(function(){
   });
 });
 
+//Click Image URL text field and highlight
+$(function(){
+  $(".image-url-box").on('click', function() {
+    this.select();
+  });
+});
+
 //Needed for Foundation to run in Rails
 $(function() {
   $(document).foundation();
