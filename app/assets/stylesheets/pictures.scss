@@ -1,3 +1,54 @@
-// Place all the styles related to the pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Styles related to the Pictures controller here.
+.fa.fa-trash {
+  font-size: 1.2rem;
+}
+
+.image-box {
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+div.show-image {
+    position: relative;
+    float: left;
+}
+
+div.show-image:hover img {
+    opacity: 0.5;
+}
+
+div.show-image:hover input {
+    display: block;
+}
+
+div.show-image input {
+    position: absolute;
+    display: none;
+}
+
+div.show-image:hover a {
+    display: block;
+}
+
+div.show-image a {
+    position: absolute;
+    display: none;
+}
+
+div.show-image input.picture-title {
+    top: 0;
+    left: 0;
+}
+
+div.show-image a.delete {
+    top: 0;
+    left: 94%;
+}
+
+#delete-icon {
+  color: #333;
+}
+
+#delete-icon:hover {
+  color: rgba(255, 15, 15, 0.83);
+}

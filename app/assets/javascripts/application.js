@@ -15,6 +15,7 @@
 //= require foundation
 //= require_tree .
 
+//Foundation alert box timeout
 $(function(){
   var clearAlert = setTimeout(function(){
     $(".alert-box").fadeOut('slow')
@@ -32,6 +33,7 @@ $(function(){
   });
 });
 
+//Needed for Foundation to run in Rails
 $(function() {
   $(document).foundation();
 });

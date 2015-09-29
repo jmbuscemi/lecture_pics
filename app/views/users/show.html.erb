@@ -51,17 +51,21 @@
               <li>
                 <div class="show-image">
                   <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
-                  <input class="picture-title" value= '<%= picture.uploaded_file_file_name %>' />
+                  <input class="picture-title" value='<%= picture.uploaded_file_file_name %>' />
                   <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
                       picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete", id:"delete-icon" %>
                 </div>
                 <div class="row">
-                  <div class="small-12 columns">
+                  <div class="input-group small-12 columns">
                     <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
-                        name: "box-content", id: "box-content" %>
-                    <button type="submit" class="button tiny copybutton" id="copy" name="copy">
-                      <i class="fa fa-clipboard"></i>
-                    </button>
+                        class: "image-title-box", name: "box-content", id: "copy-text#{picture.id}" %>
+                    <!-- <span class="input-group-button">
+                      <button class="button tiny copybutton" id="clip_button"
+                          name="copy" title="Copy to Clipboard"
+                          data-clipboard-target='copy-text<%=picture.id%>' data-id='<%=picture.id%>'>
+                            <i class="fa fa-clipboard"></i>
+                      </button>
+                    </span> -->
                   </div>
                 </div>
               </li>
