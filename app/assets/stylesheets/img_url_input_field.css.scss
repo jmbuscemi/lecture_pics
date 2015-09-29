@@ -1,4 +1,4 @@
-// Styles related to the Copy Link Box here
+// Styles related to the Image URL Box here
 input.image-title-box {
   // float:left;
   // box-sizing: none;
@@ -14,7 +14,7 @@ input.image-title-box {
   font-size: 0.85rem;
 }
 
-.radius.button.tiny.copybutton {
+.button.tiny.copybutton {
   height: 100%;
 }
 
@@ -29,7 +29,7 @@ input.image-title-box {
 
 .input-group input {
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 
 .fa.fa-clipboard {
