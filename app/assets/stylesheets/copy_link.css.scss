@@ -1,0 +1,51 @@
+// Styles related to the Copy Link Box here
+input.image-title-box {
+  // float:left;
+  // box-sizing: none;
+  // width: 86%;
+  padding: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 1px solid rgb(119, 119, 119);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.radius.button.tiny.copybutton {
+  height: 100%;
+}
+
+.input-group input:first-child, .input-group-button:first-child .button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group input, .input-group-button {
+  display: table-cell;
+}
+
+.input-group input {
+  position: relative;
+  width: 50%;
+}
+
+.fa.fa-clipboard {
+  font-size: 1.4em;
+}
+
+#copy {
+  // padding-top:0;
+  // padding-right: 0;
+  border: 1px solid rgb(119, 119, 119);
+  border-left-width: 0px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: 10px;
+}
+
+#image-title-box{
+  text-align: left;
+}

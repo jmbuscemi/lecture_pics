@@ -56,14 +56,16 @@
                       picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete", id:"delete-icon" %>
                 </div>
                 <div class="row">
-                  <div class="small-12 columns">
+                  <div class="input-group small-12 columns">
                     <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
                         class: "image-title-box", name: "box-content", id: "copy-text#{picture.id}" %>
-                    <button type="submit" class="button tiny copybutton" id="copy"
-                        name="copy" title="Copy to Clipboard"
-                        data-clipboard-target='copy-text<%=picture.id%>' data-id='<%=picture.id%>'>
-                          <i class="fa fa-clipboard"></i>
-                    </button>
+                    <span class="input-group-button">
+                      <button type="submit" class="button tiny copybutton" id="copy"
+                          name="copy" title="Copy to Clipboard"
+                          data-clipboard-target='copy-text<%=picture.id%>' data-id='<%=picture.id%>'>
+                            <i class="fa fa-clipboard"></i>
+                      </button>
+                    </span>
                   </div>
                 </div>
               </li>

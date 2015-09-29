@@ -20,64 +20,6 @@ body {
 background: #FFF;
 }
 
-#copy {
-  padding: 10px;
-  margin-left: 1px;
-}
-
-.login-box {
-  background: #fff;
-  border: 1px solid #ddd;
-  margin: 100px 0;
-  padding: 40px 20px 0 20px;
-}
-
-#sign-up-link {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.edit-box {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 40px 20px 0 20px;
-}
-
-.edit-header {
-  text-align: center;
-}
-
-
-input.image-title-box {
-  float:left;
-  box-sizing: none;
-  width: 86%;
-  padding: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-  border: 1px solid rgb(119, 119, 119);
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  color: rgba(0, 0, 0, 0.75);
-  display: block;
-  font-family: inherit;
-  font-size: 0.85rem;
-}
-
-.radius.button.tiny.copybutton {
-  // background-color: red;
-  float:left;
-  height: 100%;
-}
-
-.fa.fa-clipboard {
-  font-size: 1.4em;
-}
-
-.fa.fa-trash {
-  font-size: 1.2rem;
-}
-
 .large-block-grid-3 {
   li{
     // text-align: center;
@@ -92,24 +34,6 @@ input.image-title-box {
   left: 15px;
 }
 
-#copy {
-  // padding-top:0;
-  // padding-right: 0;
-  border: 1px solid rgb(119, 119, 119);
-  border-left-width: 0px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-.image-box {
-  margin-bottom: 2px;
-  border-radius: 2px;
-}
-
-#image-title{
-  text-align: left;
-}
-
 .alert-box {
   margin-top: 5px;
   text-align: center;
@@ -118,49 +42,4 @@ input.image-title-box {
 
 .field_with_errors {
   background-color: #F04124 !important;
-}
-
-div.show-image {
-    position: relative;
-    float: left;
-}
-
-div.show-image:hover img {
-    opacity: 0.5;
-}
-
-div.show-image:hover input {
-    display: block;
-}
-
-div.show-image input {
-    position: absolute;
-    display: none;
-}
-
-div.show-image:hover a {
-    display: block;
-}
-
-div.show-image a {
-    position: absolute;
-    display: none;
-}
-
-div.show-image input.picture-title {
-    top: 0;
-    left: 0;
-}
-
-div.show-image a.delete {
-    top: 0;
-    left: 93%;
-}
-
-#delete-icon {
-  color: #333;
-}
-
-#delete-icon:hover {
-  color: rgba(255, 15, 15, 0.83);
 }
