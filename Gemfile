@@ -38,7 +38,7 @@ gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
 gem 'foundation-rails'
 gem 'font-awesome-rails'
-gem 'zeroclipboard-rails'
+# gem 'zeroclipboard-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

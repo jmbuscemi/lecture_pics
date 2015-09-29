@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require zeroclipboard
 //= require_tree .
 
 //Foundation alert box timeout
@@ -32,16 +31,6 @@ $(function(){
       $(this).remove();
     });
   });
-});
-
-//ZeroClipboard
-$(document).ready(function() {
-  var clip = new ZeroClipboard($("#copy"))
-});
-$("#clear-test").on("click", function(){
-  var id = $(this).attr('data-id')
-  $("#copy-text"+id).val("Copy me!");
-  $("#testarea").val("");
 });
 
 //Needed for Foundation to run in Rails
