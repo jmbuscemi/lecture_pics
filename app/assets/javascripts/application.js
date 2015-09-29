@@ -35,7 +35,7 @@ $(function(){
 
 //Click Image URL text field and highlight
 $(function(){
-  $(".image-url-box").on('click', function() {
+  $("#copy-text").on('click', function() {
     this.select();
   });
 });
