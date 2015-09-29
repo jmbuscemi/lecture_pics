@@ -35,10 +35,15 @@ $(function(){
 
 //Click Image URL text field and highlight
 $(function(){
-  $("#copy-text").on('click', function() {
+  $(".image-url-box").click( function() {
     this.select();
   });
+  // $(".image-url-box").mouseup(function(e){
+  //   return false;
+  // });
 });
+
+// $('#id').click( function
 
 //Needed for Foundation to run in Rails
 $(function() {
