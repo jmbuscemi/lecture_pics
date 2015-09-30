@@ -38,9 +38,6 @@ $(function(){
   $(".image-url-box").click( function() {
     this.select();
   });
-  // $(".image-url-box").mouseup(function(e){
-  //   return false;
-  // });
 });
 
 // $('#id').click( function
