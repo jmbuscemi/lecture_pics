@@ -20,7 +20,6 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       flash[:info] = "#{@user.first_name.capitalize} successfully updated."
       redirect_to @user
-      # redirect_to root_path, notice: 'User was successfully created.'
     else
       render :new
     end
@@ -31,7 +30,6 @@ class UsersController < ApplicationController
       if @user.update(user_params)
         flash[:info] = "#{@user.first_name.capitalize} successfully updated."
         format.html { redirect_to @user }
-        # redirect_to @user, notice: 'User was successfully updated.'
       else
         flash[:alert] = "Error updating your account #{@user.first_name.capitalize}"
         format.html { render :edit }

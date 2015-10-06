@@ -11,7 +11,6 @@ class PicturesController < ApplicationController
     if @picture.save
       flash[:success] = "Picture successfully uploaded."
       redirect_to root_path
-      # redirect_to root_path, notice: 'Picture was successfully created.'
     else
       render :new
     end
@@ -21,7 +20,6 @@ class PicturesController < ApplicationController
     @picture.destroy
     flash[:warning] = "Picture successfully destroyed."
     redirect_to root_path
-    # redirect_to root_path, notice: 'Picture was successfully destroyed.'
   end
 
   private
