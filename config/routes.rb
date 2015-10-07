@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   resources :pictures
   resources :users
-  get 'sessions/login'
-  get 'login' => 'sessions#login'
+  # get 'sessions/login'
+  # post 'sessions/login'
 
-  post 'sessions/login'
-  post 'login' => 'sessions#login'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
 
-  get 'logout' => 'sessions#logout'
+  get 'logout' => 'sessions#destroy'
 
   root 'users#show'
 
