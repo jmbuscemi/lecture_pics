@@ -3,7 +3,7 @@
   <div class="login-box">
     <div class="row">
       <div class="large-12 columns">
-        <%= form_tag url: "sessions_create" do %>
+        <%= form_tag login_path do %>
           <div class="row">
             <div class="large-12 columns">
               <%= text_field_tag :email, nil, placeholder: "Email" %>
