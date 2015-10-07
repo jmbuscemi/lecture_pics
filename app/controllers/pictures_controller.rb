@@ -1,10 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:destroy]
 
-  def new
-    @picture = Picture.new
-  end
-
   def create
     @picture = Picture.new(picture_params)
     @picture.user_id = session[:user_id]

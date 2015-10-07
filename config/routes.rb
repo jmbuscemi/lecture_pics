@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :pictures
+  resources :pictures, only: [:create, :destroy]
   resources :users
   # get 'sessions/login'
   # post 'sessions/login'

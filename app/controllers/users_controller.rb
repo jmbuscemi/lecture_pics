@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 
   def show
     @picture = Picture.new
-    @pictures = @user.pictures.order(created_at: :desc)
+    @pictures = Picture.where(user: @logged_in_user).order(created_at: :desc)
+    # @pictures = @user.pictures.order(created_at: :desc)
   end
 
   def new
