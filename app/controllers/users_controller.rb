@@ -18,8 +18,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:info] = "#{@user.first_name.capitalize} successfully updated."
-      redirect_to @user
+      flash[:info] = "#{@user.first_name.capitalize} successfully created."
+      redirect_to root_path
     else
       render :new
     end
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     flash[:alert] = "User was successfully destroyed."
-    redirect_to @user
+    # redirect_to @user
     redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
