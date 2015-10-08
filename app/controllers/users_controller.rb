@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   def show
     @picture = Picture.new
     @pictures = Picture.where(user: @logged_in_user).order(created_at: :desc)
-    # @pictures = @user.pictures.order(created_at: :desc)
   end
 
   def new
@@ -41,7 +40,6 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     flash[:alert] = "User was successfully destroyed."
-    # redirect_to @user
     redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
