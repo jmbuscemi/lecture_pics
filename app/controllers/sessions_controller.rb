@@ -1,10 +1,8 @@
 class SessionsController < ApplicationController
   def new
-
   end
 
   def create
-    # if request.post?
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
@@ -14,7 +12,6 @@ class SessionsController < ApplicationController
       flash.now[:alert] = 'Invalid username or password.'
       render :new
     end
-    # end
   end
 
   def destroy
