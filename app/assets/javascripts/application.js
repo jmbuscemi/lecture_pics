@@ -40,7 +40,13 @@ $(function(){
   });
 });
 
-// $('#id').click( function
+//Only allow one click on upload
+$(function(){
+  $("input[type=submit]").on("click", function() {
+    $(event.target).attr("disabled", true);
+    $(event.target).closest('form').submit();
+  });
+});
 
 //Needed for Foundation to run in Rails
 $(function() {
