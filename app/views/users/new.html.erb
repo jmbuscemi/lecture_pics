@@ -1,5 +1,27 @@
-<h1>New User</h1>
+<nav class="top-bar" role="navigation" aria-hidden="true" data-options="mobile_show_parent_link: false" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <%= link_to 'TIYD-Rails TA Page', login_path, class:"center" %>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a href="#">Contribute</a>
+        <ul class="dropdown">
+          <li><%= link_to 'Repo', 'https://github.com/jmbuscemi/lecture_pics', target: "_blank" %></li>
+          <li class="divider"></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+<%= render partial: 'layouts/alert' %>
+<h2 class="edit-header">Create Account</h2>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', users_path %>
