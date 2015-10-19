@@ -58,12 +58,8 @@ class UsersController < ApplicationController
     def logged_in?
       @user = User.find_by_id(session[:user_id])
       unless @user
-        if session[:user_id] == nil
-          redirect_to login_path
-        else
-          flash[:info] = "Please login"
-          redirect_to login_path
-        end
+        flash[:warning] = "Please login"
+        redirect_to login_path
       end
     end
 end
