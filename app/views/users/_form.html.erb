@@ -6,37 +6,43 @@
         <%= form_for(@user) do |f| %>
           <div class="row">
             <div class="large-12 columns">
-              <%= f.label :first_name %>
-              <%= f.text_field :first_name %>
+              <%= f.text_field :first_name, placeholder: "First Name" %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <%= f.label :last_name %>
-              <%= f.text_field :last_name %>
+              <%= f.text_field :last_name, placeholder: "Last Name" %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <%= f.label :email %>
-              <%= f.text_field :email %>
+              <%= f.text_field :email, placeholder: "Email"  %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <%= f.label :password %>
-              <%= f.password_field :password %>
+              <%= f.password_field :password, placeholder: "Password"  %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
-              <%= f.label "Confirm Password" %>
-              <%= f.password_field :password_confirmation %>
+              <%= f.password_field :password_confirmation, placeholder: "Confirm Password"  %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 large-centered columns">
-              <%= f.submit "Save", class: "button expand"%>
+              <% if @user.persisted? %>
+                <%= f.submit "Save", class: "button expand"%>
+              <% else %>
+                <%= f.submit "Create", class: "button expand"%>
+              <% end %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 large-centered columns" id="sign-up-link" >
+              <% unless @user.persisted? %>
+                <%= link_to "Back", login_path %>
+              <% end %>
             </div>
           </div>
         <% end %>
