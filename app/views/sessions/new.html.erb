@@ -1,3 +1,28 @@
+<nav class="top-bar" role="navigation" aria-hidden="true" data-options="mobile_show_parent_link: false" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="#">
+          TIYD-Rails TA Page
+        </a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a href="#">Contribute</a>
+        <ul class="dropdown">
+          <li><%= link_to 'Repo', 'https://github.com/jmbuscemi/lecture_pics', target: "_blank" %></li>
+          <li class="divider"></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+
 <%= render partial: 'layouts/alert' %>
 <div class="large-3 large-centered columns">
   <div class="login-box">
