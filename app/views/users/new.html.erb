@@ -13,7 +13,10 @@
       <li class="has-dropdown">
         <a href="#">Contribute</a>
         <ul class="dropdown">
-          <li><%= link_to 'Repo', 'https://github.com/jmbuscemi/lecture_pics', target: "_blank" %></li>
+          <li>
+            <%= link_to '<i class="fa fa-code-fork fa-fw fa-lg" title="GitHub"></i>&nbsp; Repo'.html_safe,
+                'https://github.com/jmbuscemi/lecture_pics', target: "_blank" %>
+          </li>
           <li class="divider"></li>
         </ul>
       </li>
@@ -23,5 +26,4 @@
 
 <%= render partial: 'layouts/alert' %>
 <h2 class="edit-header">Create Account</h2>
-
 <%= render 'form' %>

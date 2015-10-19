@@ -2,9 +2,7 @@
   <ul class="title-area">
     <li class="name">
       <h1>
-        <a href="#">
-          TIYD-Rails TA Page
-        </a>
+        <%= link_to 'TIYD-Rails TA Page', "#", class:"center" %>
       </h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -15,7 +13,10 @@
       <li class="has-dropdown">
         <a href="#">Contribute</a>
         <ul class="dropdown">
-          <li><%= link_to 'Repo', 'https://github.com/jmbuscemi/lecture_pics', target: "_blank" %></li>
+          <li>
+            <%= link_to '<i class="fa fa-code-fork fa-fw fa-lg" title="GitHub"></i>&nbsp; Repo'.html_safe,
+                'https://github.com/jmbuscemi/lecture_pics', target: "_blank" %>
+          </li>
           <li class="divider"></li>
         </ul>
       </li>

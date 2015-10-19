@@ -13,10 +13,16 @@
     <ul class="right">
       <li class="divider"></li>
       <li class="has-dropdown">
-        <a href="#"><%= @user.name %></a>
+        <a href="#"><i class = 'fa fa-user fa-lg fa-fw'></i>&nbsp; <%= @user.name %></a>
         <ul class="dropdown">
-          <li><%= link_to 'Edit Profile', edit_user_path(@user) %></li>
-          <li><%= link_to 'Log Out', logout_path %></li>
+          <li>
+            <%= link_to '<i class="fa fa-pencil fa-fw" title="Edit"></i>&nbsp; Edit'.html_safe,
+                edit_user_path(@user) %>
+          </li>
+          <li>
+            <%= link_to '<i class="fa fa-power-off fa-fw" title="Log Out"></i>&nbsp; Log Out'.html_safe,
+                logout_path %>
+          </li>
           <li class="divider"></li>
         </ul>
       </li>
@@ -75,7 +81,7 @@
     <hr/>
     <div class="row">
       <div class="large-6 columns">
-        <p>© Copyright no one at all. Go to town.</p>
+        <p>It is not the length of life, but the depth. -Emerson</p>
       </div>
       <div class="large-6 columns">
       </div>
