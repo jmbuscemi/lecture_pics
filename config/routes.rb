@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   resources :pictures, only: [:create, :destroy]
-  resources :users
-  # get 'sessions/login'
-  # post 'sessions/login'
+  resources :users, except: [:show]
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
 
   get 'logout' => 'sessions#destroy'
 
-  root 'users#show'
+  get 'my_profile' => 'users#my_profile'
+
+  root 'users#my_profile'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
