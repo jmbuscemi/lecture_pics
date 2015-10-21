@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :logged_in?, except: [:new, :create]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:my_profile, :edit, :update, :destroy]
 
-  def show
+  def my_profile
     @picture = Picture.new
     @pictures = Picture.where(user: @user).order(created_at: :desc)
   end
