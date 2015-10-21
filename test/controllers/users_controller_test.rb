@@ -20,8 +20,8 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to root_path
   end
 
-  test "should show user" do
-    get :show, id: @user
+  test "should get my_profile page" do
+    get :my_profile, id: @user
     assert_response :success
   end
 

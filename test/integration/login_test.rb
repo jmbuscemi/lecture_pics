@@ -9,7 +9,7 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
 
     follow_redirect!
-    assert_template "show"
+    assert_template "my_profile"
     assert response.body.match("Lottie")
 
     assert_select "a[href='#{logout_path}']"
@@ -22,7 +22,7 @@ class LoginTest < ActionDispatch::IntegrationTest
   end
 
   test "can't view anything witout logging in" do
-    get user_path(users(:one).id)
+    get my_profile_path
     assert_redirected_to login_path
     follow_redirect!
     assert_template "new"
@@ -32,7 +32,7 @@ class LoginTest < ActionDispatch::IntegrationTest
     get login_path
     post login_path, email: "lottie@email.com", password: "junk"
     assert_template "new"
-    post login_path, email: "wrong@email.com", password: "junk"
+    post login_path, email: "wrong@email.com", password: "password"
     assert_template "new"
   end
 end
