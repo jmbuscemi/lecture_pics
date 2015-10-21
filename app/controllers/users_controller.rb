@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @picture = Picture.new
-    @pictures = Picture.where(user: @logged_in_user).order(created_at: :desc)
+    @pictures = Picture.where(user: @user).order(created_at: :desc)
   end
 
   def new
@@ -26,14 +26,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        flash[:info] = "#{@user.first_name.capitalize} successfully updated."
-        format.html { redirect_to @user }
-      else
-        flash[:alert] = "Error updating your account #{@user.first_name.capitalize}"
-        format.html { render :edit }
-      end
+    if @user.update(user_params)
+      flash[:info] = "#{@user.first_name.capitalize} successfully updated."
+      redirect_to @user
+    else
+      flash[:alert] = "Error updating your account #{@user.first_name.capitalize}"
+      render :edit
     end
   end
 
@@ -53,13 +51,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:id, :first_name, :last_name, :email, :password,
           :password_confirmation)
-    end
-
-    def logged_in?
-      @user = User.find_by_id(session[:user_id])
-      unless @user
-        flash[:warning] = "Please login"
-        redirect_to login_path
-      end
     end
 end
