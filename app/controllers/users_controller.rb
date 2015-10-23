@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       flash[:info] = "#{@user.first_name.capitalize} successfully updated."
-      redirect_to @user
+      redirect_to my_profile_path
     else
       flash[:alert] = "Error updating your account #{@user.first_name.capitalize}"
       render :edit
