@@ -21,7 +21,7 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should get my_profile page" do
-    get :my_profile, id: @user
+    get :my_profile
     assert_response :success
   end
 
@@ -33,7 +33,7 @@ class UsersControllerTest < ActionController::TestCase
   test "should update user" do
     patch :update, id: @user, user: { email: @user.email, first_name: @user.first_name,
         password: "password" }
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to my_profile_path
   end
 
   test "should destroy user" do
