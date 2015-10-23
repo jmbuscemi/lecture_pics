@@ -36,6 +36,17 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to my_profile_path
   end
 
+  test "should update user without password change" do
+    patch :update, id: @user, user: { email: @user.email, first_name: @user.first_name }
+    assert_redirected_to my_profile_path
+  end
+
+  test "should not update user" do
+    patch :update, id: @user, user: { email: @user.email, first_name: @user.first_name,
+        password: "wrong" }
+    assert_template :edit
+  end
+
   test "should destroy user" do
     assert_difference('User.count', -1) do
       delete :destroy, id: @user
