@@ -57,7 +57,7 @@
               <li>
                 <div class="show-image">
                   <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
-                  <input class="picture-title" value='<%= picture.uploaded_file_file_name %>' />
+                  <%= text_field_tag picture.uploaded_file_file_name, class:"picture-title" %>
                   <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
                       picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete", id:"delete-icon" %>
                 </div>
