@@ -6,31 +6,41 @@
           <div class="row">
             <div class="large-12 columns">
               <%= f.text_field :first_name, placeholder: "First Name" %>
+              <% if !@user.errors.messages[:first_name].blank? %>
+                <small class='error'><%= show_errors(@user, :first_name) %></small>
+              <% end %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               <%= f.text_field :last_name, placeholder: "Last Name" %>
+              <% if !@user.errors.messages[:last_name].blank? %>
+                <small class='error'><%= show_errors(@user, :last_name) %></small>
+              <% end %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               <%= f.text_field :email, placeholder: "Email"  %>
+              <% if !@user.errors.messages[:email].blank? %>
+                <small class='error'><%= show_errors(@user, :email) %></small>
+              <% end %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               <%= f.password_field :password, placeholder: "Password"  %>
-              <% if @user.errors.any? %>
-                <% @user.errors.full_messages.each do |msg| %>
-                  <small class="error"><%= msg %></small>
-                <% end %>
+              <% if !@user.errors.messages[:password].blank? %>
+                <small class='error'><%= show_errors(@user, :password) %></small>
               <% end %>
             </div>
           </div>
           <div class="row">
             <div class="large-12 columns">
               <%= f.password_field :password_confirmation, placeholder: "Confirm Password"  %>
+              <% if !@user.errors.messages[:password_confirmation].blank? %>
+                <small class='error'><%= show_errors(@user, :password_confirmation) %></small>
+              <% end %>
             </div>
           </div>
           <div class="row">
