@@ -33,7 +33,6 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 gem 'puma'
-gem 'devise'
 gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
 gem 'foundation-rails'
