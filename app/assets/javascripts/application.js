@@ -42,7 +42,7 @@ $(function(){
 
 //Only allow one click on upload
 $(function(){
-  $("input[type=submit]").on("click", function() {
+  $("input[type=submit]").click(function() {
     $(event.target).attr("disabled", true);
     $(event.target).closest('form').submit();
   });
