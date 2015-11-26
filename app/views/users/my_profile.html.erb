@@ -32,20 +32,27 @@
 
 <%= render partial: 'layouts/alert' %>
 
+
+<div class="row">
+  <div class="medium-7 large-6 columns">
+    <h4>Upload Today's Lecture Pictures</h4>
+  </div>
+</div>
+<div class="row">
+  <%= form_for @picture, html: { multipart: true } do |f| %>
+    <div class="small-8 columns">
+      <%= f.file_field :uploaded_file %>
+    </div>
+    <div class=" columns">
+      <%= f.submit 'Upload', class: "radius button tiny" %>
+    </div>
+  <% end %>
+</div>
+<div class="row">
+  <hr>
+</div>
 <div class="row">
   <div class="large-12 columns">
-    <h4>Upload Today's Lecture Pictures</h4>
-    <div class="row">
-      <%= form_for @picture, html: { multipart: true } do |f| %>
-        <div class="small-8 columns">
-          <%= f.file_field :uploaded_file %>
-        </div>
-        <div class=" columns">
-          <%= f.submit 'Upload', class: "radius button tiny" %>
-        </div>
-      <% end %>
-    </div>
-
     <div class="section-container tabs" data-section>
       <section class="section">
         <h5 class="title">Uploaded Pictures</h5>
