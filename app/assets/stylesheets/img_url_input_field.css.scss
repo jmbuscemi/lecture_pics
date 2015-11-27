@@ -41,15 +41,16 @@ input.image-url-box {
 }
 
 #copy-input-div {
+  padding-left: 15px;
   padding-right: 0;
 }
 
-.small-2.end.columns {
-  padding-right: 25px;
+.small-3.end.columns {
+  padding-right: 35px;
   padding-left: 0;
 }
 
-.small-2.end.columns :hover {
+.small-3.end.columns :hover {
   background: #CECECE;
   cursor: pointer;
 }
