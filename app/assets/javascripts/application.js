@@ -49,6 +49,12 @@ $(function(){
   });
 });
 
+//Clipboard JS
+$(document).ready(function(){
+  var clip = new Clipboard('.btn');
+  console.log(clip);
+});
+
 //Needed for Foundation to run in Rails
 $(function() {
   $(document).foundation();
