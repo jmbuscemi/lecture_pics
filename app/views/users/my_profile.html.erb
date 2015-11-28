@@ -72,12 +72,12 @@
                   picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete", id:"delete-icon" %>
             </div>
           </div>
-          <div class="small-9 columns" id="copy-input-div">
+          <div class="small-9 columns copy-input-div">
             <input type="text" name="box-content" id="copy-text"
                 value='<%= "#{picture.uploaded_file.url}" %>' class="image-url-box" tabindex="1"/>
           </div>
-          <div class="small-3 end columns" id="copy-button-div">
-            <span class="postfix" id="clip-button"><i class="fa fa-clipboard"></i></span></input>
+          <div class="small-3 end columns copy-button" data-clipboard-target="#copy-text">
+              <span class="postfix" id="clip-button"><i class="fa fa-clipboard"></i></span></input>
           </div>
         </li>
       <% end %>
