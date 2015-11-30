@@ -36,13 +36,6 @@
 <div class="row">
   <div class="medium-7 large-6 columns">
     <h4>Upload Today's Lecture Pictures</h4>
-    <!-- Target -->
-    <!-- <textarea id="bar">Mussum ipsum cacilds...</textarea> -->
-
-    <!-- Trigger -->
-    <!-- <button class="btn" data-clipboard-action="cut" data-clipboard-target="#bar">
-        Cut to clipboard
-    </button> -->
   </div>
 </div>
 <div class="row">
@@ -80,11 +73,14 @@
             </div>
           </div>
           <div class="small-9 columns copy-input-div">
-            <input type="text" name="box-content" id="copy-text"
+            <input type="text" name="box-content" id="copy-text-<%=picture.id%>"
                 value='<%= "#{picture.uploaded_file.url}" %>' class="image-url-box" tabindex="1"/>
           </div>
-          <div class="small-3 end columns copy-button" data-clipboard-target="#copy-text">
-              <span class="postfix" id="clip-button"><i class="fa fa-clipboard"></i></span></input>
+          <div class="small-3 end columns copy-button btn" data-clipboard-target="#copy-text-<%=picture.id%>" data-clipboard-action="copy">
+            <span class="postfix" id="clip-button">
+              <i class="fa fa-clipboard"></i>
+            </span>
+            </input>
           </div>
         </li>
       <% end %>
