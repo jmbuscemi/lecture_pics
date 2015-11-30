@@ -74,7 +74,7 @@
           </div>
           <div class="small-9 columns copy-input-div">
             <input type="text" name="box-content" id="copy-text-<%=picture.id%>"
-                value='<%= "#{picture.uploaded_file.url}" %>' class="image-url-box" tabindex="1"/>
+                value="<%=picture.uploaded_file.url%>" class="image-url-box" tabindex="1"/>
           </div>
           <div class="small-3 end columns">
             <span class="postfix copy-button" id="clip-button" data-clipboard-target="#copy-text-<%=picture.id%>" data-clipboard-action="copy" data-tooltip aria-haspopup="true" class="has-tip tip-bottom" title="Copy URL to Clipboard...">
