@@ -37,6 +37,7 @@ gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
 gem 'foundation-rails'
 gem 'font-awesome-rails'
+gem 'clipboard-rails'
 # gem 'zeroclipboard-rails'
 
 group :development, :test do

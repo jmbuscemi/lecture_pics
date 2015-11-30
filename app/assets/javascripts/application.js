@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require clipboard
 //= require_tree .
 
 //Foundation alert box timeout
@@ -46,6 +47,12 @@ $(function(){
     $(event.target).attr("disabled", true);
     $(event.target).closest('form').submit();
   });
+});
+
+//Clipboard JS
+$(document).ready(function(){
+  var clip = new Clipboard('.btn');
+  console.log(clip);
 });
 
 //Needed for Foundation to run in Rails

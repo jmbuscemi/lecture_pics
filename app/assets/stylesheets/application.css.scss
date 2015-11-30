@@ -23,7 +23,6 @@ background: #FFF;
 .small-12.columns {
   width:270px;
   padding: 0;
-  // display: inline-block;
   text-align: center;
   left: 15px;
 }
@@ -40,7 +39,16 @@ background: #FFF;
 }
 
 hr {
-  margin-top: 1.25rem;
-  margin-right: 2.5rem;
-  margin-bottom: 1.1875rem;
+  margin: .75rem 0 1.1875rem;
+}
+
+.has-tip, .has-tip:hover{
+  border-bottom: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+.tooltip {
+  font-size: 80%;
+  padding: 0.6rem;
 }

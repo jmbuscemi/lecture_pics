@@ -57,30 +57,36 @@
       <section class="section">
         <h5 class="title">Uploaded Pictures</h5>
       </section>
-      <section class="section">
-        <div class="content" data-slug="panel2">
-          <ul class="large-block-grid-3">
-            <% @pictures.each do |picture| %>
-              <li>
-                <div class="show-image">
-                  <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
-                  <%= text_field_tag picture.uploaded_file_file_name, class:"picture-title" %>
-                  <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
-                      picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete", id:"delete-icon" %>
-                </div>
-                <div class="row">
-                  <div class="small-12 columns">
-                    <%= text_field_tag picture.uploaded_file.url, "#{picture.uploaded_file.url}",
-                        class: "image-url-box", name: "box-content", id: "copy-text", tabindex: "1" %>
-                  </div>
-                </div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </section>
     </div>
   </div>
+</div>
+<div class="row">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+      <% @pictures.each do |picture| %>
+        <li>
+          <div class="small-12 columns">
+            <div class="show-image">
+              <%= image_tag picture.uploaded_file.url(:medium), class: "image-box" %>
+              <%= text_field_tag picture.uploaded_file_file_name, class:"picture-title" %>
+              <%= link_to '<i class="fa fa-trash" title="Delete"></i>'.html_safe,
+                  picture ,method: :delete, data: { confirm: 'Are you sure?' }, class:"delete", id:"delete-icon" %>
+            </div>
+          </div>
+          <div class="small-9 columns copy-input-div">
+            <input type="text" name="box-content" id="copy-text-<%=picture.id%>"
+                value='<%= "#{picture.uploaded_file.url}" %>' class="image-url-box" tabindex="1"/>
+          </div>
+          <div class="small-3 end columns copy-button btn" data-clipboard-target="#copy-text-<%=picture.id%>" data-clipboard-action="copy">
+            <span class="postfix" id="clip-button">
+              <span data-tooltip aria-haspopup="true" class="has-tip tip-bottom" title="Copy to Clipboard!">
+                <i class="fa fa-clipboard"></i>
+              </span>
+            </span>
+            </input>
+          </div>
+        </li>
+      <% end %>
+    </ul>
 </div>
 
 <footer class="row">

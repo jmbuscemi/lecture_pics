@@ -1,15 +1,11 @@
 // Styles related to the Image URL Box here
 input.image-url-box {
-  // float:left;
-  // box-sizing: none;
-  // width: 86%;
   padding: 0;
   padding-left: 4px;
   padding-right: 4px;
   border: 1px solid rgb(119, 119, 119);
-  border-radius: 2px;
-  // border-top-left-radius: 2px;
-  // border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
   color: rgba(0, 0, 0, 0.75);
   font-family: inherit;
   font-size: 0.85rem;
@@ -37,16 +33,40 @@ input.image-url-box {
   font-size: 1.4em;
 }
 
-#clip_button {
-  // padding-top:0;
-  // padding-right: 0;
+#clip-button {
   border: 1px solid rgb(119, 119, 119);
   border-left-width: 0px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-  padding: 10px;
+}
+
+.copy-input-div {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+.small-3.end.columns {
+  padding-right: 35px;
+  padding-left: 0;
+}
+
+.small-3.end.columns :hover {
+  background: #CECECE;
+  cursor: pointer;
 }
 
 #image-title-box{
   text-align: left;
+}
+
+span.postfix {
+  background: #fff;
+  color: #333333;
+  border-color: #cccccc;
+}
+
+#clip-button:active {
+  border: .14rem solid #008CBA;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
