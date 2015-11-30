@@ -19,16 +19,16 @@
 //Foundation alert box timeout
 $(function(){
   var clearAlert = setTimeout(function(){
-    $(".alert-box").fadeOut('slow')
+    $('.alert-box').fadeOut('slow')
   }, 3500);
 
-  $(document).on("click", ".alert-box a.close", function(event){
+  $(document).on('click', '.alert-box a.close', function(event){
     clearTimeout(clearAlert);
   });
 
-  $(document).on("click", ".alert-box a.close", function(event) {
+  $(document).on('click', '.alert-box a.close', function(event) {
     event.preventDefault();
-    $(this).closest(".alert-box").fadeOut(function(event){
+    $(this).closest('.alert-box').fadeOut(function(event){
       $(this).remove();
     });
   });
@@ -36,15 +36,15 @@ $(function(){
 
 //Click Image URL text field and highlight
 $(function(){
-  $(".image-url-box").click( function() {
+  $('.image-url-box').click( function() {
     this.select();
   });
 });
 
 //Only allow one click on upload
 $(function(){
-  $("input[type=submit]").click(function() {
-    $(event.target).attr("disabled", true);
+  $('input[type=submit]').click(function() {
+    $(event.target).attr('disabled', true);
     $(event.target).closest('form').submit();
   });
 });
@@ -52,6 +52,14 @@ $(function(){
 //Clipboard JS
 $(document).ready(function(){
   var clip = new Clipboard('.copy-button');
+
+  clip.on('success', function(e) {
+    $('.tooltip').text('Copied!');
+    setTimeout('$("span[role=tooltip]").removeClass("tooltip");', 1000);
+    setTimeout('$("span[role=tooltip]").text("Copy URL to Clipboard...");', 1100);
+    setTimeout('$("span[role=tooltip]").addClass("tooltip");', 2000);
+});
+
 });
 
 //Needed for Foundation to run in Rails
