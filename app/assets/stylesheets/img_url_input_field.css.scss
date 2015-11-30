@@ -64,3 +64,9 @@ span.postfix {
   color: #333333;
   border-color: #cccccc;
 }
+
+#clip-button:active {
+  border: .14rem solid #008CBA;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
