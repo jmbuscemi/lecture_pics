@@ -76,9 +76,9 @@
             <input type="text" name="box-content" id="copy-text-<%=picture.id%>"
                 value='<%= "#{picture.uploaded_file.url}" %>' class="image-url-box" tabindex="1"/>
           </div>
-          <div class="small-3 end columns copy-button" data-clipboard-target="#copy-text-<%=picture.id%>" data-clipboard-action="copy">
-            <span class="postfix" id="clip-button">
-              <span data-tooltip aria-haspopup="true" class="has-tip tip-bottom" title="Copy to Clipboard!">
+          <div class="small-3 end columns">
+            <span class="postfix copy-button" id="clip-button" data-clipboard-target="#copy-text-<%=picture.id%>" data-clipboard-action="copy" data-tooltip aria-haspopup="true" class="has-tip tip-bottom" title="Copy URL to Clipboard...">
+              <span>
                 <i class="fa fa-clipboard"></i>
               </span>
             </span>
