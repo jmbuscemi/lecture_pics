@@ -41,3 +41,14 @@ background: #FFF;
 hr {
   margin: .75rem 0 1.1875rem;
 }
+
+.has-tip, .has-tip:hover{
+  border-bottom: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+.tooltip {
+  font-size: 80%;
+  padding: 0.6rem;
+}
