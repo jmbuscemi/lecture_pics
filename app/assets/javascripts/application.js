@@ -51,8 +51,7 @@ $(function(){
 
 //Clipboard JS
 $(document).ready(function(){
-  var clip = new Clipboard('.btn');
-  console.log(clip);
+  var clip = new Clipboard('.copy-button');
 });
 
 //Needed for Foundation to run in Rails
